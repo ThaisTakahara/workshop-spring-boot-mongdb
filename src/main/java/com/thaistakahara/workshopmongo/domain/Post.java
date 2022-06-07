@@ -1,9 +1,12 @@
 package com.thaistakahara.workshopmongo.domain;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.thaistakahara.workshopmongo.dto.AuthorDTO;
@@ -68,7 +71,7 @@ public class Post implements Serializable {
 
 	public void setAuthor(AuthorDTO author) {
 		this.author = author;
-	}	
+	}		
 
 	@Override
 	public int hashCode() {
